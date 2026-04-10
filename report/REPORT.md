@@ -104,8 +104,8 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 
 | Thành viên | Strategy | Retrieval Score (/10) | Điểm mạnh | Điểm yếu |
 |-----------|----------|----------------------|-----------|----------|
-| Tôi | `recursive_400` | 6/10 | Dễ triển khai, semantic chunking tốt hơn fixed | Một số top-1 vẫn lệch trọng tâm khi bài quá dài |
-| [Tên] | | | | |
+| Tôi | `recursive_400` | 6 | Dễ triển khai, semantic chunking tốt hơn fixed | Một số top-1 vẫn lệch trọng tâm khi bài quá dài |
+| Nguyễn Lâm Tùng | 'SentenceChunker (by_sentences)' | 7.5 |Match tốt cho query định nghĩa, chunk dễ đọc |	Số chunk lớn, dễ mất ngữ cảnh dài |
 | [Tên] | | | | |
 
 **Strategy nào tốt nhất cho domain này? Tại sao?**
