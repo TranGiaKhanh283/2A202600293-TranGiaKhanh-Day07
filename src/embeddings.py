@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import math
+import os
 
 LOCAL_EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
@@ -51,7 +52,13 @@ class OpenAIEmbedder:
 
         self.model_name = model_name
         self._backend_name = model_name
-        self.client = OpenAI()
+        # Support GitHub Models (free tier) via Azure inference endpoint.
+        # User can set:
+        # - GITHUB_TOKEN (recommended) or OPENAI_API_KEY (fallback)
+        # - GITHUB_MODELS_BASE_URL (optional override)
+        token = os.getenv("GITHUB_TOKEN") or os.getenv("OPENAI_API_KEY")
+        base_url = os.getenv("GITHUB_MODELS_BASE_URL", "https://models.inference.ai.azure.com/")
+        self.client = OpenAI(base_url=base_url, api_key=token)
 
     def __call__(self, text: str) -> list[float]:
         response = self.client.embeddings.create(model=self.model_name, input=text)

@@ -1,0 +1,30 @@
+{
+  "queries": [
+    {
+      "query": "What is artificial intelligence and what capabilities are usually associated with it?",
+      "gold_answer": "AI is the capability of computational systems to perform tasks linked to human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making.",
+      "metadata_filter": { "doc_id": "Artificial-intelligence-Wikipedia" }
+    },
+    {
+      "query": "In deep learning, what does the word 'deep' refer to?",
+      "gold_answer": "It refers to using multiple layers in neural networks; more precisely, the depth of transformations from input to output.",
+      "metadata_filter": { "doc_id": "Deep-learning-Wikipedia" }
+    },
+    {
+      "query": "What is an embedding in machine learning and why is cosine similarity commonly used with embeddings?",
+      "gold_answer": "An embedding maps high-dimensional/complex data into lower-dimensional vectors that preserve relationships; cosine similarity compares direction and is less biased by magnitude/frequency.",
+      "metadata_filter": { "doc_id": "Embedding-machine-learning-Wikipedia" }
+    },
+    {
+      "query": "What are large language models typically trained to do?",
+      "gold_answer": "Large language models are trained on large text corpora to predict and generate language, supporting tasks like completion, question answering, and instruction-following.",
+      "metadata_filter": { "doc_id": "Large-language-model-Wikipedia" }
+    },
+    {
+      "query": "What is machine learning and how is it related to artificial intelligence?",
+      "gold_answer": "Machine learning is a field where systems learn patterns from data to improve task performance; it is a core subfield and practical approach within AI.",
+      "metadata_filter": { "doc_id": "Machine-learning-Wikipedia" }
+    }
+  ]
+}
+
